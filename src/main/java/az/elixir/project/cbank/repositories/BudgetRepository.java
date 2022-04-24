@@ -1,0 +1,12 @@
+package az.elixir.project.cbank.repositories;
+
+import az.elixir.project.cbank.models.BudgetModel;
+import az.elixir.project.cbank.models.UserModel;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface BudgetRepository extends JpaRepository<BudgetModel, Integer> {
+
+    BudgetModel findByUser(UserModel userModel);
+}
